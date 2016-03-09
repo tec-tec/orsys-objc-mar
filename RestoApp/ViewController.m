@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Restaurant.h"
+#import "RestaurantLibrary.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *gradeSlider;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
+@property (strong, nonatomic) RestaurantLibrary *library;
 
 @end
 
@@ -50,5 +52,16 @@
     resto.style = self.styleTextField.text;
     resto.visited = self.visitedSwitch.on;
     resto.visited ? (resto.grade = self.gradeSlider.value) : (resto.grade = -1);
+
+    [self.library addRestaurant:resto];
+}
+
+- (RestaurantLibrary *)library {
+
+    if (!_library) {
+        _library = [[RestaurantLibrary alloc] init];
+    }
+
+    return _library;
 }
 @end
