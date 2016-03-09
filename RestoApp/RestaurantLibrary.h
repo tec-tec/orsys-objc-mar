@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString * const kNotificationRestaurantAdded = @"RestoAdded";
+
 @class Restaurant;
 
 @interface RestaurantLibrary : NSObject

@@ -19,6 +19,9 @@
 - (void)addRestaurant:(Restaurant *)restaurant {
 
     [self.storageArray addObject:restaurant];
+
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:kNotificationRestaurantAdded object:nil];
 }
 
 - (NSArray<Restaurant *> *)allRestaurants {

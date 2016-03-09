@@ -28,6 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+
+    [center addObserverForName:kNotificationRestaurantAdded object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        //Fait qq chose
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
