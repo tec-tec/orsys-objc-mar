@@ -13,6 +13,7 @@
 		3379AADF1C90115700C35683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3379AADD1C90115700C35683 /* Main.storyboard */; };
 		3379AAE11C90115700C35683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3379AAE01C90115700C35683 /* Assets.xcassets */; };
 		3379AAE41C90115700C35683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3379AAE21C90115700C35683 /* LaunchScreen.storyboard */; };
+		3379AAED1C9038A300C35683 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3379AAEC1C9038A300C35683 /* Restaurant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		3379AAE01C90115700C35683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3379AAE31C90115700C35683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3379AAE51C90115700C35683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3379AAEB1C9038A300C35683 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		3379AAEC1C9038A300C35683 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				3379AAD81C90115700C35683 /* AppDelegate.m */,
 				3379AADA1C90115700C35683 /* ViewController.h */,
 				3379AADB1C90115700C35683 /* ViewController.m */,
+				3379AAEB1C9038A300C35683 /* Restaurant.h */,
+				3379AAEC1C9038A300C35683 /* Restaurant.m */,
 				3379AADD1C90115700C35683 /* Main.storyboard */,
 				3379AAE01C90115700C35683 /* Assets.xcassets */,
 				3379AAE21C90115700C35683 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3379AAED1C9038A300C35683 /* Restaurant.m in Sources */,
 				3379AADC1C90115700C35683 /* ViewController.m in Sources */,
 				3379AAD91C90115700C35683 /* AppDelegate.m in Sources */,
 				3379AAD61C90115700C35683 /* main.m in Sources */,
