@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Restaurant.h"
 
 @interface ViewController ()
 
@@ -32,7 +33,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)visitedSwitchChanged:(UISwitch *)sender {
+
+    self.gradeSlider.enabled = sender.on;
+}
+
 - (IBAction)saveRestaurant:(id)sender {
+
+    if (self.nameTextField.text.length < 2) {
+        return;
+    }
     
+    Restaurant *resto = [[Restaurant alloc] init];
+    resto.name = self.nameTextField.text;
+    resto.address = self.addressTextField.text;
+    resto.style = self.styleTextField.text;
+    resto.visited = self.visitedSwitch.on;
+    resto.visited ? (resto.grade = self.gradeSlider.value) : (resto.grade = -1);
 }
 @end
