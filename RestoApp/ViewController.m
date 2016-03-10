@@ -62,6 +62,8 @@
     [self.library addRestaurant:resto];
 }
 
+#pragma mark - Lazy instanciation
+
 - (RestaurantLibrary *)library {
 
     if (!_library) {
