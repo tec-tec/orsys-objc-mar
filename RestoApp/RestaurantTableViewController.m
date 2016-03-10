@@ -8,6 +8,7 @@
 
 #import "RestaurantTableViewController.h"
 #import "RestaurantLibrary.h"
+#import "Restaurant.h"
 
 @interface RestaurantTableViewController ()
 
@@ -33,15 +34,17 @@
     return [[self.library allRestaurants] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RestoCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    Restaurant *currentResto = [[self.library allRestaurants] objectAtIndex:indexPath.row];
+    cell.textLabel.text = currentResto.name;
+    cell.detailTextLabel.text = currentResto.style;
+
     return cell;
 }
-*/
+
 
 /*
 #pragma mark - Navigation
