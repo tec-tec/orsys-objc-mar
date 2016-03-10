@@ -70,10 +70,9 @@
 		3379AAD31C90115700C35683 /* RestoApp */ = {
 			isa = PBXGroup;
 			children = (
-				33976C5B1C91699C00E5408C /* UIColor+ChartedColors.h */,
-				33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */,
 				3379AAD71C90115700C35683 /* AppDelegate.h */,
 				3379AAD81C90115700C35683 /* AppDelegate.m */,
+				33976C631C918E7800E5408C /* Categories */,
 				33976C621C9173F400E5408C /* View Controllers */,
 				33976C611C91732900E5408C /* Models */,
 				3379AADD1C90115700C35683 /* Main.storyboard */,
@@ -113,6 +112,15 @@
 				33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		33976C631C918E7800E5408C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				33976C5B1C91699C00E5408C /* UIColor+ChartedColors.h */,
+				33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
