@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="305" y="418"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Restaurant Table View Controller-->
         <scene sceneID="uCZ-5B-Axv">
             <objects>
-                <tableViewController id="ANL-Wc-h9i" sceneMemberID="viewController">
+                <tableViewController id="ANL-Wc-h9i" customClass="RestaurantTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EXG-BA-ySn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
