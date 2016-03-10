@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantLibrary.h"
+#import "Restaurant.h"
 
 @interface RestaurantLibrary ()
 
@@ -15,6 +16,15 @@
 @end
 
 @implementation RestaurantLibrary
+
+- (instancetype)initWithDefaultData
+{
+    self = [super init];
+    if (self) {
+        [self prepareDefaultData];
+    }
+    return self;
+}
 
 - (void)addRestaurant:(Restaurant *)restaurant {
 
@@ -36,5 +46,20 @@
     }
 
     return _storageArray;
+}
+
+- (void)prepareDefaultData {
+
+    for (int i = 1; i<=10; i++) {
+        Restaurant *resto = [[Restaurant alloc] init];
+        resto.name = [NSString stringWithFormat:@"Resto %d", i];
+        resto.address = [NSString stringWithFormat:@"%d Rue de Rivoli, Paris", i];
+        resto.style = [NSString stringWithFormat:@"Style %d", i];
+        resto.visited = NO;
+        resto.grade = -1;
+        [self.storageArray addObject:resto];
+
+    }
+
 }
 @end

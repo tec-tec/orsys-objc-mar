@@ -14,6 +14,7 @@ static NSString * const kNotificationRestaurantAdded = @"RestoAdded";
 
 @interface RestaurantLibrary : NSObject
 
+- (instancetype)initWithDefaultData;
 - (void)addRestaurant:(Restaurant *)restaurant;
 - (NSArray <Restaurant *> *)allRestaurants;
 

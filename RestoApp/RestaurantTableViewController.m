@@ -59,7 +59,7 @@
 - (RestaurantLibrary *)library {
 
     if (!_library) {
-        _library = [[RestaurantLibrary alloc] init];
+        _library = [[RestaurantLibrary alloc] initWithDefaultData];
     }
 
     return _library;
