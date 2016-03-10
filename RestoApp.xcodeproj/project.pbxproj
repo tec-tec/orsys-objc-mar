@@ -15,6 +15,7 @@
 		3379AAE41C90115700C35683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3379AAE21C90115700C35683 /* LaunchScreen.storyboard */; };
 		3379AAED1C9038A300C35683 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3379AAEC1C9038A300C35683 /* Restaurant.m */; };
 		3379AAF01C90609F00C35683 /* RestaurantLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3379AAEF1C90609F00C35683 /* RestaurantLibrary.m */; };
+		33976C5D1C91699C00E5408C /* UIColor+ChartedColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3379AAEC1C9038A300C35683 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		3379AAEE1C90609F00C35683 /* RestaurantLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantLibrary.h; sourceTree = "<group>"; };
 		3379AAEF1C90609F00C35683 /* RestaurantLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantLibrary.m; sourceTree = "<group>"; };
+		33976C5B1C91699C00E5408C /* UIColor+ChartedColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChartedColors.h"; path = "../UIColor+ChartedColors.h"; sourceTree = "<group>"; };
+		33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChartedColors.m"; path = "../UIColor+ChartedColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		3379AAD31C90115700C35683 /* RestoApp */ = {
 			isa = PBXGroup;
 			children = (
+				33976C5B1C91699C00E5408C /* UIColor+ChartedColors.h */,
+				33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */,
 				3379AAD71C90115700C35683 /* AppDelegate.h */,
 				3379AAD81C90115700C35683 /* AppDelegate.m */,
 				3379AADA1C90115700C35683 /* ViewController.h */,
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3379AAF01C90609F00C35683 /* RestaurantLibrary.m in Sources */,
+				33976C5D1C91699C00E5408C /* UIColor+ChartedColors.m in Sources */,
 				3379AAED1C9038A300C35683 /* Restaurant.m in Sources */,
 				3379AADC1C90115700C35683 /* ViewController.m in Sources */,
 				3379AAD91C90115700C35683 /* AppDelegate.m in Sources */,
@@ -312,6 +318,7 @@
 				3379AAEA1C90115700C35683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

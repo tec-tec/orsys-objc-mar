@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Restaurant.h"
 #import "RestaurantLibrary.h"
+#import "UIColor+ChartedColors.h"
 
 @interface ViewController ()
 
@@ -34,6 +35,8 @@
     [center addObserverForName:kNotificationRestaurantAdded object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         //Fait qq chose
     }];
+
+    self.saveButton.tintColor = [UIColor chartedRedColor];
 }
 
 - (void)didReceiveMemoryWarning {
