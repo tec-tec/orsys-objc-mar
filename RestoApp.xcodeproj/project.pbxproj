@@ -17,6 +17,7 @@
 		3379AAF01C90609F00C35683 /* RestaurantLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3379AAEF1C90609F00C35683 /* RestaurantLibrary.m */; };
 		33976C5D1C91699C00E5408C /* UIColor+ChartedColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */; };
 		33976C601C91727A00E5408C /* RestaurantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */; };
+		33976C661C91BF4F00E5408C /* RestaurantDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C651C91BF4F00E5408C /* RestaurantDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChartedColors.m"; path = "../UIColor+ChartedColors.m"; sourceTree = "<group>"; };
 		33976C5E1C91727A00E5408C /* RestaurantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewController.h; sourceTree = "<group>"; };
 		33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewController.m; sourceTree = "<group>"; };
+		33976C641C91BF4F00E5408C /* RestaurantDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailsViewController.h; sourceTree = "<group>"; };
+		33976C651C91BF4F00E5408C /* RestaurantDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				3379AADB1C90115700C35683 /* ViewController.m */,
 				33976C5E1C91727A00E5408C /* RestaurantTableViewController.h */,
 				33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */,
+				33976C641C91BF4F00E5408C /* RestaurantDetailsViewController.h */,
+				33976C651C91BF4F00E5408C /* RestaurantDetailsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				3379AADC1C90115700C35683 /* ViewController.m in Sources */,
 				3379AAD91C90115700C35683 /* AppDelegate.m in Sources */,
 				33976C601C91727A00E5408C /* RestaurantTableViewController.m in Sources */,
+				33976C661C91BF4F00E5408C /* RestaurantDetailsViewController.m in Sources */,
 				3379AAD61C90115700C35683 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
