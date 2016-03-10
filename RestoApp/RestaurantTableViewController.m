@@ -9,6 +9,7 @@
 #import "RestaurantTableViewController.h"
 #import "RestaurantLibrary.h"
 #import "Restaurant.h"
+#import "RestaurantDetailsViewController.h"
 
 @interface RestaurantTableViewController ()
 
@@ -45,16 +46,25 @@
     return cell;
 }
 
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
+    if ([segue.identifier isEqualToString:@"showDetails"]) {
+
+        RestaurantDetailsViewController *d = segue.destinationViewController;
+
+        NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
+
+        Restaurant *r = [[self.library allRestaurants]objectAtIndex:ip.row];
+        d.restaurantToShow = r;
+
+    }
 }
-*/
+
 
 - (RestaurantLibrary *)library {
 
