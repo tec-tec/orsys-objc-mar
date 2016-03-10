@@ -74,14 +74,8 @@
 				33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */,
 				3379AAD71C90115700C35683 /* AppDelegate.h */,
 				3379AAD81C90115700C35683 /* AppDelegate.m */,
-				3379AADA1C90115700C35683 /* ViewController.h */,
-				3379AADB1C90115700C35683 /* ViewController.m */,
-				3379AAEB1C9038A300C35683 /* Restaurant.h */,
-				3379AAEC1C9038A300C35683 /* Restaurant.m */,
-				3379AAEE1C90609F00C35683 /* RestaurantLibrary.h */,
-				3379AAEF1C90609F00C35683 /* RestaurantLibrary.m */,
-				33976C5E1C91727A00E5408C /* RestaurantTableViewController.h */,
-				33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */,
+				33976C621C9173F400E5408C /* View Controllers */,
+				33976C611C91732900E5408C /* Models */,
 				3379AADD1C90115700C35683 /* Main.storyboard */,
 				3379AAE01C90115700C35683 /* Assets.xcassets */,
 				3379AAE21C90115700C35683 /* LaunchScreen.storyboard */,
@@ -97,6 +91,28 @@
 				3379AAD51C90115700C35683 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33976C611C91732900E5408C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3379AAEB1C9038A300C35683 /* Restaurant.h */,
+				3379AAEC1C9038A300C35683 /* Restaurant.m */,
+				3379AAEE1C90609F00C35683 /* RestaurantLibrary.h */,
+				3379AAEF1C90609F00C35683 /* RestaurantLibrary.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		33976C621C9173F400E5408C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3379AADA1C90115700C35683 /* ViewController.h */,
+				3379AADB1C90115700C35683 /* ViewController.m */,
+				33976C5E1C91727A00E5408C /* RestaurantTableViewController.h */,
+				33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
