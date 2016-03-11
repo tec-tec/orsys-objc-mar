@@ -20,6 +20,17 @@
     // Do any additional setup after loading the view.
 
     self.title = self.restaurantToShow.name;
+
+    UIButton *b= [UIButton buttonWithType:UIButtonTypeInfoDark];
+    b.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview:b];
+
+    NSLayoutConstraint *c1 = [NSLayoutConstraint constraintWithItem:b attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+
+    NSLayoutConstraint *c2 = [NSLayoutConstraint constraintWithItem:b attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+
+    [self.view addConstraints:@[c1,c2]];
 }
 
 - (void)didReceiveMemoryWarning {
