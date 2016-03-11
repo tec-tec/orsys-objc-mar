@@ -190,7 +190,7 @@
                     <navigationItem key="navigationItem" id="7FX-8B-JFq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0us-Lu-mim">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" identifier="sgowForm" popoverAnchorBarButtonItem="0us-Lu-mim" id="lLd-ew-hkV">
+                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" identifier="showForm" popoverAnchorBarButtonItem="0us-Lu-mim" id="lLd-ew-hkV">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
