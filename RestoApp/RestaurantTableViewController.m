@@ -22,6 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+
+    __weak RestaurantTableViewController *weakSelf = self;
+
+    [center addObserverForName:kNotificationRestaurantAdded object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        //Fait qq chose
+        [weakSelf.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
