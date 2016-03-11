@@ -20,8 +20,6 @@
 @property (weak, nonatomic) IBOutlet UISlider *gradeSlider;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
-@property (strong, nonatomic) RestaurantLibrary *library;
-
 @end
 
 @implementation ViewController
@@ -29,12 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
-    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-
-    [center addObserverForName:kNotificationRestaurantAdded object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        //Fait qq chose
-    }];
 
     self.saveButton.tintColor = [UIColor chartedRedColor];
 }
@@ -63,6 +55,7 @@
     resto.visited ? (resto.grade = self.gradeSlider.value) : (resto.grade = -1);
 
     [self.library addRestaurant:resto];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Lazy instanciation

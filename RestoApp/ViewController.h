@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RestaurantLibrary;
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) RestaurantLibrary *library;
 
 @end
 

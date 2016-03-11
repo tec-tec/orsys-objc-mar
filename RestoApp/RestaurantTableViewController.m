@@ -10,6 +10,7 @@
 #import "RestaurantLibrary.h"
 #import "Restaurant.h"
 #import "RestaurantDetailsViewController.h"
+#import "ViewController.h"
 
 @interface RestaurantTableViewController ()
 
@@ -62,6 +63,10 @@
         Restaurant *r = [[self.library allRestaurants]objectAtIndex:ip.row];
         d.restaurantToShow = r;
 
+    } else if ([segue.identifier isEqualToString:@"showForm"]) {
+
+        ViewController *form = segue.destinationViewController;
+        form.library = self.library;
     }
 }
 
