@@ -18,6 +18,7 @@
 		33976C5D1C91699C00E5408C /* UIColor+ChartedColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C5C1C91699C00E5408C /* UIColor+ChartedColors.m */; };
 		33976C601C91727A00E5408C /* RestaurantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */; };
 		33976C661C91BF4F00E5408C /* RestaurantDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C651C91BF4F00E5408C /* RestaurantDetailsViewController.m */; };
+		33976C681C91D41B00E5408C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33976C671C91D41B00E5408C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewController.m; sourceTree = "<group>"; };
 		33976C641C91BF4F00E5408C /* RestaurantDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailsViewController.h; sourceTree = "<group>"; };
 		33976C651C91BF4F00E5408C /* RestaurantDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailsViewController.m; sourceTree = "<group>"; };
+		33976C671C91D41B00E5408C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33976C681C91D41B00E5408C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 		3379AAC81C90115700C35683 = {
 			isa = PBXGroup;
 			children = (
+				33976C671C91D41B00E5408C /* MapKit.framework */,
 				3379AAD31C90115700C35683 /* RestoApp */,
 				3379AAD21C90115700C35683 /* Products */,
 			);
