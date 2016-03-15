@@ -19,6 +19,7 @@
 		33976C601C91727A00E5408C /* RestaurantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C5F1C91727A00E5408C /* RestaurantTableViewController.m */; };
 		33976C661C91BF4F00E5408C /* RestaurantDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33976C651C91BF4F00E5408C /* RestaurantDetailsViewController.m */; };
 		33976C681C91D41B00E5408C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33976C671C91D41B00E5408C /* MapKit.framework */; };
+		33976C6B1C93123F00E5408C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33976C6A1C93123F00E5408C /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		33976C641C91BF4F00E5408C /* RestaurantDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailsViewController.h; sourceTree = "<group>"; };
 		33976C651C91BF4F00E5408C /* RestaurantDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailsViewController.m; sourceTree = "<group>"; };
 		33976C671C91D41B00E5408C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33976C691C93123300E5408C /* RestoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RestoApp.entitlements; sourceTree = "<group>"; };
+		33976C6A1C93123F00E5408C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33976C681C91D41B00E5408C /* MapKit.framework in Frameworks */,
+				33976C6B1C93123F00E5408C /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 		3379AAC81C90115700C35683 = {
 			isa = PBXGroup;
 			children = (
+				33976C6A1C93123F00E5408C /* CloudKit.framework */,
 				33976C671C91D41B00E5408C /* MapKit.framework */,
 				3379AAD31C90115700C35683 /* RestoApp */,
 				3379AAD21C90115700C35683 /* Products */,
@@ -77,6 +82,7 @@
 		3379AAD31C90115700C35683 /* RestoApp */ = {
 			isa = PBXGroup;
 			children = (
+				33976C691C93123300E5408C /* RestoApp.entitlements */,
 				3379AAD71C90115700C35683 /* AppDelegate.h */,
 				3379AAD81C90115700C35683 /* AppDelegate.m */,
 				33976C631C918E7800E5408C /* Categories */,
@@ -163,6 +169,12 @@
 				TargetAttributes = {
 					3379AAD01C90115700C35683 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = A7SGM6JEMA;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -321,10 +333,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RestoApp/RestoApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tectec.RestoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -332,10 +348,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RestoApp/RestoApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tectec.RestoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
