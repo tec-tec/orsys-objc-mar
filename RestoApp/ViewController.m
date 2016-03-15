@@ -38,7 +38,7 @@
 
 - (IBAction)visitedSwitchChanged:(UISwitch *)sender {
 
-    self.gradeSlider.enabled = sender.on;
+    self.gradeSlider.hidden = !sender.on;
 }
 
 - (IBAction)saveRestaurant:(id)sender {
