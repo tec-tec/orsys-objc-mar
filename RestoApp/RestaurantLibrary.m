@@ -8,10 +8,13 @@
 
 #import "RestaurantLibrary.h"
 #import "Restaurant.h"
+@import CloudKit;
 
 @interface RestaurantLibrary ()
 
 @property (strong, nonatomic) NSMutableArray <Restaurant*> *storageArray;
+@property (strong, nonatomic) CKContainer *container;
+@property (strong, nonatomic) CKDatabase *privateDatabase;
 
 @end
 
@@ -21,7 +24,7 @@
 {
     self = [super init];
     if (self) {
-        [self prepareDefaultData];
+//        [self prepareDefaultData];
     }
     return self;
 }
@@ -32,6 +35,15 @@
 
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center postNotificationName:kNotificationRestaurantAdded object:nil];
+
+    [self.privateDatabase saveRecord:[self cloudRecordFromRestaurant:restaurant] completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+
+        if (!error) {
+            //Everything was OK
+        } else {
+            //Error, we need to handle it
+        }
+    }];
 }
 
 - (NSArray<Restaurant *> *)allRestaurants {
@@ -43,6 +55,18 @@
 
     if (!_storageArray) {
         _storageArray = [[NSMutableArray alloc] init];
+
+        CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Restaurant" predicate:[NSPredicate predicateWithValue:YES]];
+        [self.privateDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {
+
+            if (!error) {
+                for (CKRecord *r in results) {
+                    [_storageArray addObject:[self restaurantFromCloudRecord:r]];
+                }
+                NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+                [center postNotificationName:kNotificationRestaurantAdded object:nil];
+            }
+        }];
     }
 
     return _storageArray;
@@ -61,5 +85,47 @@
 
     }
 
+}
+
+- (CKRecord *)cloudRecordFromRestaurant:(Restaurant *)restaurant {
+
+    CKRecord *record = [[CKRecord alloc] initWithRecordType:@"Restaurant"];
+    record[@"name"] = restaurant.name;
+    record[@"address"] = restaurant.address;
+    record[@"style"] = restaurant.style;
+    record[@"visited"] = @(restaurant.visited);
+    record[@"grade"] = @(restaurant.grade);
+
+    return record;
+}
+
+- (Restaurant *)restaurantFromCloudRecord:(CKRecord *)record {
+
+    Restaurant *restaurant = [[Restaurant alloc] init];
+    restaurant.name = record[@"name"];
+    restaurant.address = record[@"address"];
+    restaurant.style = record[@"style"];
+    restaurant.visited = [record[@"visited"] boolValue];
+    restaurant.grade = [record[@"grade"] floatValue];
+
+    return restaurant;
+}
+
+- (CKContainer *)container {
+
+    if (!_container) {
+        _container = [CKContainer defaultContainer];
+    }
+
+    return  _container;
+}
+
+- (CKDatabase *)privateDatabase {
+
+    if (!_privateDatabase) {
+        _privateDatabase = [self.container privateCloudDatabase];
+    }
+
+    return _privateDatabase;
 }
 @end
